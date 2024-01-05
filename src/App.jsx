@@ -4,6 +4,7 @@ import GameBoard from './components/GameBoard'
 import Log from './components/Log'
 import { WINNING_COMBINATIONS } from "./constants/winning-combination"
 import GameOver from './components/GameOver'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const PLAYERS = {
   "X": "Player 1",
@@ -111,6 +112,7 @@ function App() {
         <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
+      <SpeedInsights />
     </main>
   )
 }
